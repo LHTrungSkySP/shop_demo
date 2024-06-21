@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+.style-logo {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+}
+.header-item{
+  width: 302px;
+}
+@media screen and (max-width: 576px) {
+  .sm\:header-item {
+      width: 100%;
+  }
+}

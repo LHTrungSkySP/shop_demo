@@ -3,17 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
 import { CommonModule } from '@angular/common';
-
+import { ButtonModule } from 'primeng/button';
+import { MegaMenuModule } from 'primeng/megamenu';
+import { MenubarModule } from 'primeng/menubar';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
+import { BadgeModule } from 'primeng/badge';
+import { InputTextModule } from 'primeng/inputtext';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule,
+    MegaMenuModule,
+    MenubarModule,
+    IconFieldModule,
+    InputIconModule,
+    InputTextModule,
+    BadgeModule,
+    BreadcrumbModule
   ]
 })
 export class AppModule { }
