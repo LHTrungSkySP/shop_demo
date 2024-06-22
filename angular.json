@@ -45,6 +45,12 @@
 					},
 					"configurations": {
 						"production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
 							"budgets": [
 								{
 									"type": "initial",
@@ -61,6 +67,12 @@
 							"extraWebpackConfig": "projects/master-app/webpack.prod.config.js"
 						},
 						"development": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.prod.ts",
+                  "with": "src/environments/environment.ts"
+                }
+              ],
 							"optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true
@@ -156,6 +168,12 @@
 					},
 					"configurations": {
 						"production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
 							"budgets": [
 								{
 									"type": "initial",
@@ -172,6 +190,12 @@
 							"extraWebpackConfig": "projects/shopping/webpack.prod.config.js"
 						},
 						"development": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.prod.ts",
+                  "with": "src/environments/environment.ts"
+                }
+              ],
 							"optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true
@@ -267,6 +291,12 @@
 					},
 					"configurations": {
 						"production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
 							"budgets": [
 								{
 									"type": "initial",
@@ -283,6 +313,12 @@
 							"extraWebpackConfig": "projects/manage/webpack.prod.config.js"
 						},
 						"development": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.prod.ts",
+                  "with": "src/environments/environment.ts"
+                }
+              ],
 							"optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true
