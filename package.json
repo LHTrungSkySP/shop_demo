@@ -5,6 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:master": "ng build master-app --prod",
+    "build:shopping": "ng build shopping --prod",
+    "build:manage": "ng build manage --prod",
+    "build:all": "npm run build:master && npm run build:shopping && npm run build:manage",
+    "vercel-build": "npm run build:all",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
@@ -13,6 +18,7 @@
   "dependencies": {
     "@angular-architects/module-federation": "^18.0.2",
     "@angular/animations": "^17.3.0",
+    "@angular/cdk": "^18.0.4",
     "@angular/common": "^17.3.0",
     "@angular/compiler": "^17.3.0",
     "@angular/core": "^17.3.0",
@@ -39,6 +45,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ngx-build-plus": "^18.0.0",
-    "typescript": "~5.4.2"
+    "typescript": "~5.4.2",
+    "vercel": "^34.2.7"
   }
 }

@@ -26,7 +26,6 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
     InputIconModule,
     InputTextModule,
     BadgeModule,
-    BreadcrumbModule
   ]
 })
 export class AppModule { }
