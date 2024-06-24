@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve master-app --configuration production",
+    "start:master-app": "ng serve master-app --configuration production",
+    "start:shopping": "ng serve shopping --configuration production",
+    "start:manage": "ng serve manage --configuration production",
+    "start:all": "npm run start:master && npm run start:shopping && npm run start:manage",
+    "vercel-start": "npm run start:all",
     "build": "ng build",
     "build:master": "ng build master-app --configuration production",
     "build:shopping": "ng build shopping --configuration production",

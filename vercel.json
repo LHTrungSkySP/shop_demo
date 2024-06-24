@@ -2,17 +2,39 @@
   "version": 2,
   "builds": [
     {
-      "src": "angular.json",
+      "src": "projects/master-app/angular.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "dist/master-app"
+      }
+    },
+    {
+      "src": "projects/shopping/angular.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/shopping"
+      }
+    },
+    {
+      "src": "projects/manage/angular.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/manage"
       }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "/master-app/(.*)",
+      "dest": "/master-app/index.html"
+    },
+    {
+      "src": "/shopping/(.*)",
+      "dest": "/shopping/index.html"
+    },
+    {
+      "src": "/manage/(.*)",
+      "dest": "/manage/index.html"
     }
   ]
 }
