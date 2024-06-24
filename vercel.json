@@ -3,27 +3,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/master-app",
-        "buildCommand": "npm run build:master-app"
-      }
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/shopping",
-        "buildCommand": "npm run build:shopping"
-      }
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/manage",
-        "buildCommand": "npm run build:manage"
-      }
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
