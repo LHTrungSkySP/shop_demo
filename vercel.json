@@ -36,9 +36,5 @@
       "src": "/manage/(.*)",
       "dest": "/manage/index.html"
     }
-  ],
-  "scripts": {
-    "build": "npm run vercel-build",
-    "start": "npm run vercel-start"
-  }
+  ]
 }
