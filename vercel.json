@@ -2,21 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "angular.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist/master-app"
       }
     },
     {
-      "src": "angular.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist/shopping"
       }
     },
     {
-      "src": "angular.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist/manage"
