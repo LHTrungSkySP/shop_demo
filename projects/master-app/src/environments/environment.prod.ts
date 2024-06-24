@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  remoteEntryUrl1: 'https://minh-trang-do-gom.vercel.app/shopping/remoteEntry.js',
-  remoteEntryUrl2: 'https://minh-trang-do-gom.vercel.app/manage/remoteEntry.js'
+  shopping: 'https://minh-trang-do-gom.vercel.app/shopping/remoteEntry.js',
+  manage: 'https://minh-trang-do-gom.vercel.app/manage/remoteEntry.js'
 };

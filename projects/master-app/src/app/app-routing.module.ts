@@ -7,7 +7,15 @@ const routes: Routes = [
     path: "",
     loadChildren: () => loadRemoteModule({
       type: 'module',
-      remoteEntry: environment.remoteEntryUrl1,
+      remoteEntry: environment.shopping,
+      exposedModule: './Module'
+    }).then(m => m.AppModule)
+  },
+  {
+    path: "admin",
+    loadChildren: () => loadRemoteModule({
+      type: 'module',
+      remoteEntry: environment.manage,
       exposedModule: './Module'
     }).then(m => m.AppModule)
   },

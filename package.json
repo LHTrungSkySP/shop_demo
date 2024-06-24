@@ -8,7 +8,7 @@
     "start:shopping": "ng serve shopping",
     "start:manage": "ng serve manage",
     "start:all": "npm run start && npm run start:shopping && npm run start:manage",
-    "start-prod:all": "npm run start:master-app && npm run start:shopping && npm run start:manage",
+    "start-prod:all": "npm run start:shopping && npm run start:master-app && npm run start:manage",
     "vercel-start": "npm run start-prod:all",
 
     "build": "ng serve master-app --configuration development",
@@ -16,7 +16,7 @@
     "build:shopping": "ng serve shopping",
     "build:manage": "ng serve manage",
     "build:all": "npm run build && npm run build:shopping && npm run build:manage",
-    "build-prod:all": "npm run build:master-app && npm run build:shopping && npm run build:manage",
+    "build-prod:all": "npm run build:shopping && npm run build:master-app && npm run build:manage",
     "vercel-build": "npm run build-prod:all",
 
     "watch": "ng build --watch --configuration development",
