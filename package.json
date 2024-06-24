@@ -11,7 +11,7 @@
     "start-prod:all": "npm run start:master-app && npm run start:shopping && npm run start:manage",
     "vercel-start": "npm run start:all",
     "build:all": "ng build master-app --configuration development && ng build shopping && ng build manage",
-    "build-prod:all": "ng build master-app --configuration production && ng build shopping && ng build manage",
+    "build-prod:all": "ng build master-app --configuration production && ng build shopping --configuration production && ng build manage --configuration production",
     "vercel-build": "npm run build-prod:all",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
