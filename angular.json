@@ -47,8 +47,8 @@
 						"production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "projects/master-app/src/environments/environment.ts",
+                  "with": "projects/master-app/src/environments/environment.prod.ts"
                 }
               ],
 							"budgets": [
@@ -69,8 +69,8 @@
 						"development": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.prod.ts",
-                  "with": "src/environments/environment.ts"
+                  "replace": "projects/master-app/src/environments/environment.prod.ts",
+                  "with": "projects/master-app/src/environments/environment.ts"
                 }
               ],
 							"optimization": false,
@@ -168,12 +168,6 @@
 					},
 					"configurations": {
 						"production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
 							"budgets": [
 								{
 									"type": "initial",
@@ -190,12 +184,6 @@
 							"extraWebpackConfig": "projects/shopping/webpack.prod.config.js"
 						},
 						"development": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.prod.ts",
-                  "with": "src/environments/environment.ts"
-                }
-              ],
 							"optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true
@@ -291,12 +279,6 @@
 					},
 					"configurations": {
 						"production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
 							"budgets": [
 								{
 									"type": "initial",
@@ -313,12 +295,6 @@
 							"extraWebpackConfig": "projects/manage/webpack.prod.config.js"
 						},
 						"development": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.prod.ts",
-                  "with": "src/environments/environment.ts"
-                }
-              ],
 							"optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true
