@@ -5,7 +5,7 @@ module.exports = withModuleFederationPlugin({
   name: 'manage',
 
   exposes: {
-    './Component': './projects/manage/src/app/app.component.ts',
+    './Module': './projects/manage/src/app/app.module.ts',
   },
 
   shared: {
