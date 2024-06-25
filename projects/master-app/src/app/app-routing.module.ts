@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { environment } from '../environments/environment';
 const routes: Routes = [
   {
-    path: "admin",
+    path: "",
     loadChildren: () => loadRemoteModule({
       type: 'module',
       remoteEntry: environment.shopping,
@@ -12,7 +12,7 @@ const routes: Routes = [
     }).then(m => m.AppModule)
   },
   {
-    path: "",
+    path: "admin",
     loadChildren: () => loadRemoteModule({
       type: 'module',
       remoteEntry: environment.manage,

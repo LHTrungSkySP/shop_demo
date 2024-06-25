@@ -1,0 +1,11 @@
+<div class="p-grid p-nogutter">
+  <div class="p-col-12 p-sm-6 p-md-4 p-lg-3" *ngFor="let photo of photos">
+    <div class="card">
+      <img [src]="photo.url" alt="{{photo.title}}" class="w-full" />
+      <div class="card-body">
+        <h5 class="card-title">{{photo.title}}</h5>
+        <p class="card-text">{{photo.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

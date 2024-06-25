@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { GalleryModule } from './gallery/gallery.module';
+import { GalleriaModule } from 'primeng/galleria';
 @NgModule({
   declarations: [
     HomeComponent
@@ -10,6 +12,8 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
   imports: [
     CommonModule,
     BreadcrumbModule,
+    GalleryModule,
+    GalleriaModule,
     RouterModule.forChild([
       {
         path: "",
