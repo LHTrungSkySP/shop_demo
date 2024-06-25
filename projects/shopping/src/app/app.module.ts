@@ -12,6 +12,7 @@ import { InputIconModule } from 'primeng/inputicon';
 import { BadgeModule } from 'primeng/badge';
 import { InputTextModule } from 'primeng/inputtext';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
