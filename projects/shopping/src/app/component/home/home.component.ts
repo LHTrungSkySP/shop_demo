@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { ProductCategoryService } from '../../services/product-category.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,7 +14,15 @@ export class HomeComponent {
 
   responsiveOptions: any[] | undefined;
   items: MenuItem[] = [];
+  constructor(
+    private productCategoryService: ProductCategoryService
+  ){
+
+  }
+
   ngOnInit() {
+    alert();
+    this.getCategory();
     this.breadcrumbItems = [
       { icon: 'pi pi-home', route: '/installation' },
       { label: 'Components' },
@@ -162,5 +171,13 @@ export class HomeComponent {
         ]
       }
     ]
+  }
+  getCategory(){
+    this.productCategoryService.filter({}).subscribe({
+      next: (res) => {
+        console.log(res);
+        
+      }
+    })
   }
 }
