@@ -21,7 +21,6 @@ export class HomeComponent {
   }
 
   ngOnInit() {
-    alert();
     this.getCategory();
     this.breadcrumbItems = [
       { icon: 'pi pi-home', route: '/installation' },
