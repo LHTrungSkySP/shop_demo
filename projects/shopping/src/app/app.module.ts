@@ -13,6 +13,7 @@ import { BadgeModule } from 'primeng/badge';
 import { InputTextModule } from 'primeng/inputtext';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AvatarModule } from 'primeng/avatar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InputIconModule,
     InputTextModule,
     BadgeModule,
+    MenubarModule,
+    AvatarModule,
   ]
 })
 export class AppModule { }

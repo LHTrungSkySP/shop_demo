@@ -5,9 +5,8 @@ import { RouterModule } from '@angular/router';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { GalleryModule } from './gallery/gallery.module';
 import { GalleriaModule } from 'primeng/galleria';
-import { PanelMenuModule } from 'primeng/panelmenu';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-import { BrowserModule } from '@angular/platform-browser';
+import { AvatarModule } from 'primeng/avatar';
+import { MenubarModule } from 'primeng/menubar';
 @NgModule({
   declarations: [
     HomeComponent
@@ -17,8 +16,7 @@ import { BrowserModule } from '@angular/platform-browser';
     BreadcrumbModule,
     GalleryModule,
     GalleriaModule,
-    PanelMenuModule,
-    // NoopAnimationsModule,
+
     RouterModule.forChild([
       {
         path: "",

@@ -14,6 +14,7 @@ export class HomeComponent {
 
   responsiveOptions: any[] | undefined;
   items: MenuItem[] = [];
+  listMegaMenu: any[] = [];
   constructor(
     private productCategoryService: ProductCategoryService
   ){
@@ -174,8 +175,7 @@ export class HomeComponent {
   getCategory(){
     this.productCategoryService.filter({}).subscribe({
       next: (res) => {
-        console.log(res);
-        
+        this.listMegaMenu = res;        
       }
     })
   }
