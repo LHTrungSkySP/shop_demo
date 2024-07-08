@@ -1,11 +1,8 @@
 <div class="flex border-1 h-screen w-full justify-content-center">
-  <div class="w-9 flex">
-    <div class="w-3">
-
-    </div>
-    <div class="card w-full">
-      <p-galleria [value]="images" [showItemNavigators]="true" [circular]="true" [responsiveOptions]="responsiveOptions"
-        [numVisible]="5">
+  <div class="w-full flex">
+    <div class="w-full customise">
+      <p-galleria [value]="images" [showItemNavigators]="true" [showThumbnails]="false" [showIndicators]="true"
+        [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions">
         <ng-template pTemplate="item" let-item>
           <div class="img-container">
             <img [src]="item.itemImageSrc" />
