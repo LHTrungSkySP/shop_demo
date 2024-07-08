@@ -1,27 +1,20 @@
 <div class="flex border-1 h-screen w-full justify-content-center">
-  <div class="w-9 flex">
-    <div class="w-3">
-      <p-panelMenu [model]="items" [multiple]="true" />
+  <div class="w-full flex">
+    <div class="w-full customise">
+      <p-galleria [value]="images" [showItemNavigators]="true" [showThumbnails]="false" [showIndicators]="true"
+        [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions">
+        <ng-template pTemplate="item" let-item>
+          <div class="img-container">
+            <img [src]="item.itemImageSrc" />
+          </div>
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="grid grid-nogutter justify-content-center">
+            <img style="object-fit: contain; height: 60px; width: 80px;" [src]="item.thumbnailImageSrc" />
+          </div>
+        </ng-template>
+      </p-galleria>
     </div>
-      <div class="card w-full">
-        <p-galleria 
-          [value]="images" 
-          [showItemNavigators]="true" 
-          [circular]="true" 
-          [responsiveOptions]="responsiveOptions" 
-          [numVisible]="5">
-          <ng-template pTemplate="item" let-item>
-            <div class="img-container">
-              <img [src]="item.itemImageSrc" />
-            </div>
-          </ng-template>
-          <ng-template pTemplate="thumbnail" let-item>
-            <div class="grid grid-nogutter justify-content-center">
-              <img style="object-fit: contain; height: 60px; width: 80px;"  [src]="item.thumbnailImageSrc" />
-            </div>
-          </ng-template>
-        </p-galleria>
-      </div>
   </div>
 </div>
 
