@@ -30,6 +30,7 @@ import { AvatarModule } from 'primeng/avatar';
     BadgeModule,
     MenubarModule,
     AvatarModule,
-  ]
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

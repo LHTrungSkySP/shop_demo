@@ -1,2 +1,84 @@
 đoạn text này để chắc chắn con master-app đang hoạt động
-<router-outlet />
+<form [formGroup]="form">
+    <!-- TIME ESTIMATE view: thời gian dự kiến -->
+    <div *ngIf="!isEditGeneralInfor" class="flex align-items-center gap-2 h-3rem mb-2">
+      <div class="flex w-2rem justify-content-center">
+        <i class="text-lg pi pi-clock"></i>
+      </div>
+      <span class="w-8rem">Thời gian dự kiến: </span>
+      <div class="flex gap-2 field mb-0" (click)="stopPropagation($event)">
+        <span *ngIf="!isEditScheduleTime" class="text-blue-500 cursor-pointer w-9rem text-center align-content-center"
+          (click)="showEditOnView('isEditScheduleTime','scheduleTime');">
+          {{(this.form.controls['scheduleTime'].value | date : 'dd/MM/yyyy')??"--/--/---- --:--"}}
+        </span>
+        <p-calendar #scheduleTime formControlName="scheduleTime" [showTime]="true" [class.hidden]="!isEditScheduleTime"
+          [hourFormat]="'24'" (onSelect)="selectDateOnView('scheduleTime')" (keydown.enter)="selectDateOnView('scheduleTime')"
+          [dateFormat]="'dd/mm/yy'" placeholder="dd/mm/yyyy hh:mm" />
+
+        <span class="align-content-center"><i class="pi pi-arrow-right"></i></span>
+
+        <span *ngIf="!isEditDeadlineTime" class="text-blue-500 cursor-pointer w-9rem text-center align-content-center"
+          (click)="showEditOnView('isEditDeadlineTime','deadlineTime')">
+          {{(this.form.controls['deadlineTime'].value | date : 'dd/MM/yyyy')??"--/--/---- --:--"}}
+        </span>
+        <p-calendar #deadlineTime formControlName="deadlineTime" [showTime]="true" [hourFormat]="'24'"
+          [class.hidden]="!isEditDeadlineTime" [dateFormat]="'dd/mm/yy'" (onSelect)="selectDateOnView('deadlineTime')"
+          (keydown.enter)="selectDateOnView('deadlineTime')" placeholder="dd/mm/yyyy hh:mm" />
+        <div class="m-error"
+          *ngIf="form.controls['scheduleTime'].invalid && form.controls['scheduleTime'].dirty">
+          <span
+            *ngIf="form.controls['scheduleTime'].errors?.['validTime']">{{form.controls['scheduleTime'].errors?.['mess']}}</span>
+          <span
+            *ngIf="form.controls['scheduleTime'].errors?.['required'] || form.controls['deadlineTime'].errors?.['required']">Đây
+            là trường bắt buộc</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIME LIVE view: thời gian thực tế -->
+    <div *ngIf="!isEditGeneralInfor" class="flex align-items-center gap-2 h-3rem mb-2">
+      <div class="flex w-2rem justify-content-center">
+        <i class="text-lg pi pi-clock"></i>
+      </div>
+      <span class="w-8rem">Thời gian thực tế:</span>
+      <div class="flex gap-2 field mb-0" (click)="stopPropagation($event)">
+        <span *ngIf="!isEditStartTime" class="text-blue-500 cursor-pointer w-9rem text-center align-content-center"
+          (click)="showEditOnView('isEditStartTime','startTime')">
+          {{(this.form.controls['startTime'].value | date : 'dd/MM/yyyy')??"--/--/---- --:--"}}
+        </span>
+        <!-- (onBlur)="selectDateOnView('isEditStartTime')" -->
+        <p-calendar #startTime formControlName="startTime" [showTime]="true" [hourFormat]="'24'"
+          [dateFormat]="'dd/mm/yy'" placeholder="dd/mm/yyyy hh:mm" [class.hidden]="!isEditStartTime"
+          (onSelect)="selectDateOnView('startTime')" (keydown.enter)="selectDateOnView('startTime')" />
+
+        <span class="align-content-center"><i class="pi pi-arrow-right"></i></span>
+
+        <span *ngIf="!isEditEndTime" class="text-blue-500 cursor-pointer w-9rem text-center align-content-center"
+          (click)="showEditOnView('isEditEndTime','endTime')">
+          {{(this.form.controls['endTime'].value | date : 'dd/MM/yyyy')??"--/--/---- --:--"}}
+        </span>
+        <!-- (onBlur)="selectDateOnView('isEditEndTime')" -->
+        <p-calendar #endTime formControlName="endTime" [showTime]="true" [class.hidden]="!isEditEndTime"
+          [hourFormat]="'24'" [dateFormat]="'dd/mm/yy'" placeholder="dd/mm/yyyy hh:mm" (onSelect)="selectDateOnView('endTime')"
+          (keydown.enter)="selectDateOnView('endTime')" />
+        <div class="m-error"
+          *ngIf="form.controls['startTime'].invalid && form.controls['startTime'].dirty">
+          <span
+            *ngIf="form.controls['startTime'].errors?.['validTime']">{{form.controls['startTime'].errors?.['mess']}}</span>
+        </div>
+      </div>
+    </div>
+
+          <!-- line 4: trạng thái
+          <div class="flex gap-2 w-30rem">
+            <div class="field align-content-center w-9rem">Trạng thái</div>
+            <div class="flex-1 field">
+              <p-dropdown appendTo="body" [options]="listStatus" [styleClass]="'w-full'" optionLabel="name" formControlName="status"></p-dropdown>
+            </div>
+          </div> -->
+          <button pButton type="button" label="Lưu" (click)="saveGeneralInfor()"
+          class="p-button p-button-pimary p-button-sm w30" icon="pi pi-save"></button>
+
+</form>
+<app-test1></app-test1>
+<!-- <router-outlet /> -->
